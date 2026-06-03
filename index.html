@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAVAX NOVA TECHNOLOGIES | Futuristic EduTech Ecosystem</title>
+  <meta name="description" content="Master emerging technologies and healthcare careers with Ravax Nova Technologies. Explore CPC Medical Coding, AI & ML, Cyber Security, Cloud, Data Science, and VLSI.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Space Grotesk', 'Sora', 'sans-serif'],
+          },
+          colors: {
+            glass: {
+              background: '#f8fafc',
+              card: 'rgba(255, 255, 255, 0.45)',
+              border: 'rgba(255, 255, 255, 0.6)',
+              dark: '#0f172a',
+            },
+            neon: {
+              blue: '#0066cc',
+              purple: '#8b5cf6',
+              cyan: '#06b6d4',
+              pink: '#d946ef',
+            }
+          },
+          boxShadow: {
+            'glow-blue': '0 8px 32px rgba(0, 102, 204, 0.15)',
+            'glow-purple': '0 8px 32px rgba(139, 92, 246, 0.15)',
+            'glow-cyan': '0 8px 32px rgba(6, 182, 212, 0.15)',
+            'neo': '8px 8px 20px #cbd5e1, -8px -8px 20px #ffffff',
+            'neo-inset': 'inset 4px 4px 10px #cbd5e1, inset -4px -4px 10px #ffffff',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-600 overflow-x-hidden font-sans selection:bg-neon-blue/20 selection:text-slate-900">
+
+  <!-- Dual Custom Cursor Follower -->
+  <div id="custom-cursor-dot" class="hidden md:block fixed w-2.5 h-2.5 bg-neon-cyan rounded-full pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-out"></div>
+  <div id="custom-cursor-ring" class="hidden md:block fixed w-8 h-8 border border-neon-blue/30 rounded-full pointer-events-none z-50 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ease-out backdrop-blur-[0.5px]"></div>
+
+  <!-- Cinematic Background Noise -->
+  <div class="noise-overlay pointer-events-none fixed inset-0 z-50 opacity-[0.03]"></div>
+
+  <!-- Mouse Spotlight Glow -->
+  <div id="radial-spotlight" class="pointer-events-none fixed inset-0 z-0 transition-opacity duration-500 opacity-60"></div>
+
+  <!-- Interactive Luminous Background Gradients -->
+  <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+    <div class="absolute top-[10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-cyan-200/20 blur-[130px] animate-[pulseGlow_12s_infinite]"></div>
+    <div class="absolute bottom-[20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-violet-200/20 blur-[160px] animate-[pulseGlow_16s_infinite_reverse]"></div>
+    <div class="absolute top-[50%] left-[30%] w-[450px] h-[450px] rounded-full bg-fuchsia-100/25 blur-[140px] animate-[pulseGlow_14s_infinite]"></div>
+  </div>
+
+  <!-- Global Header / Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-40 backdrop-blur-md bg-white/35 border-b border-white/40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center space-x-3 group">
+        <div class="relative w-9 h-9 flex items-center justify-center rounded-lg bg-gradient-to-tr from-neon-purple via-neon-cyan to-neon-blue p-[1.5px] transition-transform duration-500 group-hover:rotate-180 shadow-md">
+          <div class="w-full h-full bg-white rounded-[7px] flex items-center justify-center">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-cyan font-bold font-heading text-lg">R</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-slate-900 font-bold font-heading text-sm uppercase tracking-[0.25em]">Ravax Nova</span>
+          <span class="text-[9px] text-slate-500 tracking-[0.15em] font-semibold">TECHNOLOGIES</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#about" class="text-sm text-slate-600 hover:text-slate-900 transition-colors duration-300 tracking-wide font-medium relative py-1 group">
+          About
+          <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-neon-blue transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#medical-coding" class="text-sm text-slate-600 hover:text-slate-900 transition-colors duration-300 tracking-wide font-medium relative py-1 group">
+          Medical Coding
+          <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-neon-cyan transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#technologies" class="text-sm text-slate-600 hover:text-slate-900 transition-colors duration-300 tracking-wide font-medium relative py-1 group">
+          Emerging Tech
+          <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-neon-purple transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#journey" class="text-sm text-slate-600 hover:text-slate-900 transition-colors duration-300 tracking-wide font-medium relative py-1 group">
+          Student Journey
+          <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-neon-blue transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#placements" class="text-sm text-slate-600 hover:text-slate-900 transition-colors duration-300 tracking-wide font-medium relative py-1 group">
+          Placements
+          <span class="absolute bottom-0 left-0 w-0 h-[1.5px] bg-neon-cyan transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </nav>
+
+      <!-- Desktop CTA Button -->
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="#contact" class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/60 border border-white/80 hover:bg-white hover:border-cyan-200 shadow-neo transition-all duration-300 hover:shadow-glow-blue text-slate-800">
+          Book Career Guidance
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-toggle" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5 focus:outline-none">
+        <span class="w-6 h-[2px] bg-slate-800 rounded transition-transform duration-300"></span>
+        <span class="w-6 h-[2px] bg-slate-800 rounded transition-transform duration-300"></span>
+        <span class="w-6 h-[2px] bg-slate-800 rounded transition-transform duration-300"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="hidden md:hidden fixed inset-0 top-20 bg-white/95 backdrop-blur-lg border-b border-slate-200/50 flex flex-col p-6 space-y-6 z-30 transition-transform duration-300">
+      <a href="#about" class="text-lg text-slate-700 font-heading hover:text-neon-blue">About</a>
+      <a href="#medical-coding" class="text-lg text-slate-700 font-heading hover:text-neon-cyan">Medical Coding</a>
+      <a href="#technologies" class="text-lg text-slate-700 font-heading hover:text-neon-purple">Emerging Tech</a>
+      <a href="#journey" class="text-lg text-slate-700 font-heading hover:text-neon-blue">Student Journey</a>
+      <a href="#placements" class="text-lg text-slate-700 font-heading hover:text-neon-cyan">Placements</a>
+      <hr class="border-slate-200 my-2">
+      <a href="#contact" class="w-full text-center px-6 py-3 rounded-full font-heading text-sm font-bold uppercase tracking-wider bg-gradient-to-r from-neon-blue to-neon-purple text-white shadow-lg">
+        Book Career Guidance
+      </a>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden">
+      <!-- Custom canvas WebGL particle visualizer -->
+      <canvas id="hologram-canvas" class="absolute inset-0 z-0 pointer-events-auto opacity-70"></canvas>
+      
+      <div class="max-w-7xl mx-auto px-6 relative z-10 text-center flex flex-col items-center">
+        <!-- Badge -->
+        <div class="hero-reveal opacity-0 -translate-y-4 mb-6 inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/60 border border-white/80 shadow-sm backdrop-blur-md">
+          <span class="w-2 h-2 rounded-full bg-neon-blue animate-pulse"></span>
+          <span class="text-[10px] text-neon-blue font-bold uppercase tracking-[0.2em]">Next-Gen Learning Platform</span>
+        </div>
+        
+        <!-- Heading -->
+        <h1 class="hero-reveal opacity-0 translate-y-8 font-heading font-extrabold text-4xl sm:text-6xl md:text-8xl tracking-tight leading-[1.05] text-slate-900 max-w-5xl mb-8">
+          Learn Skills That <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-neon-cyan to-neon-purple">
+            Build Real Careers
+          </span>
+        </h1>
+        
+        <!-- Subheading -->
+        <p class="hero-reveal opacity-0 translate-y-8 text-slate-500 text-base sm:text-lg md:text-xl font-light max-w-3xl leading-relaxed mb-12">
+          Industry-focused training in Medical Coding, Artificial Intelligence, Cyber Security, Cloud Computing, Data Science, and Deep Technologies — designed for students, graduates, and working professionals.
+        </p>
+        
+        <!-- Buttons -->
+        <div class="hero-reveal opacity-0 translate-y-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+          <a href="#technologies" class="group relative w-full sm:w-auto px-8 py-4 rounded-full font-heading text-sm font-bold tracking-wider uppercase text-white bg-gradient-to-r from-neon-blue to-neon-purple overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <span class="absolute inset-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></span>
+            Explore Programs
+          </a>
+          <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full font-heading text-sm font-bold tracking-wider uppercase text-slate-700 bg-white/60 border border-white/80 hover:border-slate-300 hover:bg-white hover:text-slate-900 shadow-neo transition-all duration-300 hover:scale-105">
+            Book Career Guidance
+          </a>
+        </div>
+      </div>
+      
+      <!-- Floating Glowing Decorative Particles -->
+      <div class="absolute bottom-10 left-10 w-24 h-24 border border-neon-cyan/20 rounded-full animate-[spin_20s_linear_infinite] pointer-events-none hidden lg:block">
+        <div class="absolute -top-1.5 left-1/2 w-3 h-3 bg-neon-cyan rounded-full shadow-glow-cyan"></div>
+      </div>
+      <div class="absolute top-1/4 right-10 w-32 h-32 border border-neon-purple/20 rounded-full animate-[spin_30s_linear_infinite_reverse] pointer-events-none hidden lg:block">
+        <div class="absolute -top-2 left-1/2 w-4 h-4 bg-neon-purple rounded-full shadow-glow-purple"></div>
+      </div>
+
+      <!-- Bottom Fade Overlay -->
+      <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-slate-50 to-transparent pointer-events-none"></div>
+    </section>
+
+
+    <!-- 2. ABOUT SECTION -->
+    <section id="about" class="relative py-32 overflow-hidden border-t border-slate-200/40">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          
+          <!-- Label and Large Header -->
+          <div class="lg:col-span-6 flex flex-col">
+            <div class="about-reveal opacity-0 -translate-x-4 mb-4 flex items-center space-x-2">
+              <span class="w-8 h-[1px] bg-neon-cyan"></span>
+              <span class="text-xs text-neon-cyan font-bold uppercase tracking-[0.2em]">Our Manifesto</span>
+            </div>
+            <h2 class="about-reveal opacity-0 translate-y-8 font-heading font-bold text-3xl sm:text-5xl md:text-6xl text-slate-900 tracking-tight leading-[1.1] mb-8">
+              Education Should <br>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-cyan">Feel Like The Future</span>
+            </h2>
+            
+            <!-- Sleek Holographic Mockup Box -->
+            <div class="about-reveal opacity-0 translate-y-12 relative w-full aspect-[1.6] rounded-2xl bg-white/60 border border-white p-[1.5px] overflow-hidden group shadow-neo">
+              <div class="absolute inset-0 bg-gradient-to-r from-neon-blue/10 to-neon-purple/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div class="w-full h-full bg-white/40 rounded-[15px] p-6 flex flex-col justify-between relative overflow-hidden">
+                <div class="flex items-center justify-between border-b border-slate-200/60 pb-4">
+                  <div class="flex space-x-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+                  </div>
+                  <span class="text-[10px] text-slate-400 font-mono tracking-wider">ECOSYSTEM_CORE.SYS</span>
+                </div>
+                <!-- Abstract holographic graph visualization -->
+                <div class="flex-grow flex items-end justify-between space-x-3 pt-6 pb-2">
+                  <div class="w-full h-[30%] bg-gradient-to-t from-neon-blue/40 to-neon-blue/5 rounded-md hover:h-[70%] transition-all duration-500 relative group/bar">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-mono opacity-0 group-hover/bar:opacity-100 text-neon-blue font-bold transition-opacity duration-300">PRACTICAL</span>
+                  </div>
+                  <div class="w-full h-[50%] bg-gradient-to-t from-neon-cyan/40 to-neon-cyan/5 rounded-md hover:h-[85%] transition-all duration-500 relative group/bar">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-mono opacity-0 group-hover/bar:opacity-100 text-neon-cyan font-bold transition-opacity duration-300">SKILLS</span>
+                  </div>
+                  <div class="w-full h-[40%] bg-gradient-to-t from-neon-purple/40 to-neon-purple/5 rounded-md hover:h-[90%] transition-all duration-500 relative group/bar">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-mono opacity-0 group-hover/bar:opacity-100 text-neon-purple font-bold transition-opacity duration-300">FUTURE</span>
+                  </div>
+                  <div class="w-full h-[80%] bg-gradient-to-t from-neon-blue/40 to-neon-blue/5 rounded-md hover:h-[95%] transition-all duration-500 relative group/bar">
+                    <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[9px] font-mono opacity-0 group-hover/bar:opacity-100 text-neon-blue font-bold transition-opacity duration-300">CAREERS</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between text-[10px] text-slate-400 font-mono">
+                  <span>METRICS INITIALIZED</span>
+                  <span class="text-neon-cyan animate-pulse">● READY</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description Blocks -->
+          <div class="lg:col-span-6 flex flex-col space-y-8 font-light text-slate-500 leading-relaxed text-base sm:text-lg">
+            <p class="about-reveal opacity-0 translate-y-8">
+              At <strong class="text-slate-900 font-medium">Ravax Nova Technologies</strong>, learning is designed beyond outdated classroom structures and abstract theories.
+            </p>
+            <p class="about-reveal opacity-0 translate-y-8 border-l-2 border-neon-purple/40 pl-6 py-2">
+              We build hyper-practical, career-oriented programs that help learners develop industry-ready skills through real-world exposure, expert mentorship, globally recognized certifications, and technology-driven training experiences.
+            </p>
+            <p class="about-reveal opacity-0 translate-y-8">
+              From advanced healthcare coding roles to deep engineering technologies, our multi-faceted ecosystem is meticulously built to prepare learners for the industries shaping tomorrow.
+            </p>
+            
+            <!-- Quick Feature Badges -->
+            <div class="about-reveal opacity-0 translate-y-8 grid grid-cols-2 gap-4 pt-6">
+              <div class="flex items-center space-x-3 bg-white/60 border border-white/80 shadow-sm rounded-xl p-3">
+                <div class="w-8 h-8 rounded-lg bg-neon-blue/10 flex items-center justify-center">
+                  <svg class="w-4 h-4 text-neon-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                </div>
+                <span class="text-xs font-bold text-slate-800 uppercase tracking-wider">Expert Mentorship</span>
+              </div>
+              <div class="flex items-center space-x-3 bg-white/60 border border-white/80 shadow-sm rounded-xl p-3">
+                <div class="w-8 h-8 rounded-lg bg-neon-cyan/10 flex items-center justify-center">
+                  <svg class="w-4 h-4 text-neon-cyan" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                </div>
+                <span class="text-xs font-bold text-slate-800 uppercase tracking-wider">Applied Practicals</span>
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 3. MEDICAL CODING VERTICAL -->
+    <section id="medical-coding" class="relative py-32 overflow-hidden bg-white/40 border-t border-b border-slate-200/40">
+      
+      <!-- Luminous Background Element -->
+      <div class="absolute top-[30%] right-[10%] w-[400px] h-[400px] rounded-full bg-cyan-200/20 blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-4xl mx-auto mb-20">
+          <div class="med-reveal opacity-0 translate-y-4 mb-4 inline-flex items-center space-x-2">
+            <span class="w-3 h-3 rounded-full bg-neon-cyan flex items-center justify-center shadow-glow-cyan animate-pulse"></span>
+            <span class="text-xs text-neon-cyan font-bold uppercase tracking-[0.25em]">Healthcare Operations & Billing Hub</span>
+          </div>
+          <h2 class="med-reveal opacity-0 translate-y-8 font-heading font-bold text-3xl sm:text-5xl md:text-6xl text-slate-900 tracking-tight mb-8">
+            Healthcare Careers <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-blue">Powered By Precision</span>
+          </h2>
+          <p class="med-reveal opacity-0 translate-y-8 text-slate-500 font-light text-base sm:text-lg leading-relaxed">
+            The global healthcare industry runs on high accuracy, systematic coding, and highly trained specialists. Our Medical Coding and Billing programs are designed to help learners understand real healthcare workflows, international coding standards, insurance systems, and revenue cycle processes.
+          </p>
+        </div>
+
+        <!-- Curriculum Grid & Healthcare hologram visual -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+          
+          <!-- Cyber-Medical Interface Box -->
+          <div class="lg:col-span-5 flex flex-col justify-between bg-white/60 border border-white/80 rounded-3xl p-8 relative overflow-hidden group shadow-neo">
+            <div class="absolute inset-0 bg-radial-gradient from-neon-cyan/5 to-transparent pointer-events-none"></div>
+            
+            <div class="relative z-10 flex flex-col space-y-6">
+              <div class="flex items-center justify-between">
+                <span class="text-[10px] text-cyan-600 font-mono border border-cyan-200 px-2 py-0.5 rounded">PATIENT TELEMETRY V.12</span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)] animate-pulse"></span>
+              </div>
+              
+              <!-- Hologram Pulse Art -->
+              <div class="h-40 flex items-center justify-center relative my-4">
+                <div class="absolute inset-0 flex items-center justify-center opacity-30 group-hover:opacity-60 transition-opacity duration-700">
+                  <div class="w-32 h-32 rounded-full border border-dashed border-cyan-500 animate-[spin_10s_linear_infinite]"></div>
+                  <div class="w-20 h-20 rounded-full border border-neon-blue absolute animate-[ping_3s_ease-in-out_infinite]"></div>
+                </div>
+                <!-- EKG line svg -->
+                <svg class="w-48 h-16 text-cyan-500 relative z-10 drop-shadow-[0_2px_4px_rgba(6,182,212,0.4)]" fill="none" viewBox="0 0 100 30" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M0 15 h30 l3 -8 l3 18 l4 -16 l3 9 h10 l4 -12 l3 20 l3 -8 h37" />
+                </svg>
+              </div>
+              
+              <div class="space-y-4">
+                <h3 class="text-slate-900 font-heading font-semibold text-xl">US Healthcare Revenue Cycle</h3>
+                <p class="text-slate-500 font-light text-sm leading-relaxed">
+                  Understand how clinical data translates to global claims. Our curriculum is tailored strictly to current industry standards including American Academy of Professional Coders (AAPC) guidelines.
+                </p>
+              </div>
+            </div>
+            
+            <div class="border-t border-slate-200/50 pt-6 mt-8 flex justify-between items-center text-xs text-slate-400 font-mono">
+              <span>AAC-STANDARDS COMPLIANT</span>
+              <span class="text-neon-blue">CPC® INTEGRATED</span>
+            </div>
+          </div>
+
+          <!-- Courses Grid List -->
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Course Card 1 -->
+            <div class="course-item p-6 rounded-2xl bg-white/50 border border-white/80 hover:border-neon-cyan/40 hover:bg-white hover:shadow-neo transition-all duration-500 flex flex-col justify-between group shadow-sm">
+              <span class="text-[10px] text-neon-cyan font-mono mb-4 block">CODE: CPC-01</span>
+              <div>
+                <h4 class="text-slate-900 font-heading font-semibold text-lg mb-2 group-hover:text-neon-cyan transition-colors duration-300">Basic Medical Coding</h4>
+                <p class="text-slate-500 text-xs font-light leading-relaxed">Fundamentals of anatomy, terminology, and coding theories.</p>
+              </div>
+            </div>
+            
+            <!-- Course Card 2 -->
+            <div class="course-item p-6 rounded-2xl bg-white/50 border border-white/80 hover:border-neon-cyan/40 hover:bg-white hover:shadow-neo transition-all duration-500 flex flex-col justify-between group shadow-sm">
+              <span class="text-[10px] text-neon-cyan font-mono mb-4 block">CODE: CPC-02</span>
+              <div>
+                <h4 class="text-slate-900 font-heading font-semibold text-lg mb-2 group-hover:text-neon-cyan transition-colors duration-300">Advanced CPC Training</h4>
+                <p class="text-slate-500 text-xs font-light leading-relaxed">Intensive exam preparation designed for professional AAPC credentials.</p>
+              </div>
+            </div>
+            
+            <!-- Course Card 3 -->
+            <div class="course-item p-6 rounded-2xl bg-white/50 border border-white/80 hover:border-neon-cyan/40 hover:bg-white hover:shadow-neo transition-all duration-500 flex flex-col justify-between group shadow-sm">
+              <span class="text-[10px] text-neon-cyan font-mono mb-4 block">CODE: ICD-10</span>
+              <div>
+                <h4 class="text-slate-900 font-heading font-semibold text-lg mb-2 group-hover:text-neon-cyan transition-colors duration-300">ICD-10-CM / CPT / HCPCS</h4>
+                <p class="text-slate-500 text-xs font-light leading-relaxed">Comprehensive international diagnostics, procedures, and supply systems coding.</p>
+              </div>
+            </div>
+            
+            <!-- Course Card 4 -->
+            <div class="course-item p-6 rounded-2xl bg-white/50 border border-white/80 hover:border-neon-cyan/40 hover:bg-white hover:shadow-neo transition-all duration-500 flex flex-col justify-between group shadow-sm">
+              <span class="text-[10px] text-neon-cyan font-mono mb-4 block">CODE: RCM-01</span>
+              <div>
+                <h4 class="text-slate-900 font-heading font-semibold text-lg mb-2 group-hover:text-neon-cyan transition-colors duration-300">Medical Billing & RCM</h4>
+                <p class="text-slate-500 text-xs font-light leading-relaxed">Understanding billing, claims processing, denial management, and insurance dynamics.</p>
+              </div>
+            </div>
+
+            <!-- Course Card 5 (Full width spans) -->
+            <div class="sm:col-span-2 p-6 rounded-2xl bg-white/50 border border-white/80 hover:border-neon-cyan/40 hover:bg-white hover:shadow-neo transition-all duration-500 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 group shadow-sm">
+              <div>
+                <span class="text-[10px] text-neon-cyan font-mono mb-1 block">CODE: USH-09</span>
+                <h4 class="text-slate-900 font-heading font-semibold text-lg group-hover:text-neon-cyan transition-colors duration-300">US Healthcare & Claims Management</h4>
+                <p class="text-slate-500 text-xs font-light leading-relaxed">Deep-dive into US health processes, insurance ecosystems, and claim settlement routines.</p>
+              </div>
+              <a href="#contact" class="shrink-0 px-4 py-2 text-[10px] uppercase font-bold tracking-wider rounded-lg bg-slate-100 hover:bg-neon-cyan/15 hover:text-slate-950 border border-slate-200 transition-all duration-300">Explore Curriculum</a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Bottom Banner Statement -->
+        <div class="med-reveal opacity-0 translate-y-12 mt-16 text-center max-w-2xl mx-auto p-[1px] bg-gradient-to-r from-transparent via-slate-200 to-transparent">
+          <p class="pt-6 font-heading font-semibold text-slate-700 text-base sm:text-lg">
+            "Build a stable career in one of the world’s fastest-growing healthcare domains."
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 4. FUTURE TECHNOLOGIES SECTION -->
+    <section id="technologies" class="relative py-32 overflow-hidden">
+      <!-- Glow gradients -->
+      <div class="absolute bottom-[10%] left-[5%] w-[400px] h-[400px] rounded-full bg-violet-200/20 blur-[120px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        
+        <!-- Header -->
+        <div class="text-center max-w-4xl mx-auto mb-20">
+          <div class="tech-reveal opacity-0 translate-y-4 mb-4 inline-flex items-center space-x-2">
+            <span class="w-3 h-3 rounded-full bg-neon-purple flex items-center justify-center shadow-glow-purple animate-pulse"></span>
+            <span class="text-xs text-neon-purple font-bold uppercase tracking-[0.25em]">Cutting-Edge Engineering Core</span>
+          </div>
+          <h2 class="tech-reveal opacity-0 translate-y-8 font-heading font-bold text-3xl sm:text-5xl md:text-6xl text-slate-900 tracking-tight mb-8">
+            Learn The Technologies <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-purple via-neon-blue to-neon-cyan">Defining The Next Decade</span>
+          </h2>
+          <p class="tech-reveal opacity-0 translate-y-8 text-slate-500 font-light text-base sm:text-lg leading-relaxed">
+            Technology is evolving faster than human history has ever witnessed. Our emerging technology programs are designed to help learners move beyond theoretical guidelines and develop deep, hands-on, practical expertise.
+          </p>
+        </div>
+
+        <!-- Tech Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Card 1 -->
+          <div class="tech-card border border-white/80 rounded-3xl p-8 bg-white/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-neo hover:bg-white flex flex-col justify-between group h-[26rem] shadow-md" data-tilt>
+            <div>
+              <div class="flex items-center justify-between mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-neon-purple/10 flex items-center justify-center border border-neon-purple/20 transition-all duration-500 group-hover:scale-110 shadow-sm">
+                  <!-- AI Icon -->
+                  <svg class="w-6 h-6 text-neon-purple" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v17.792m4.5-17.792v17.792M3 9.75h18m-18 4.5h18M9.75 9.75h4.5m-4.5 4.5h4.5M3 5.25a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 5.25v13.5a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18.75V5.25z"></path></svg>
+                </div>
+                <span class="text-[10px] text-slate-400 font-mono tracking-widest">COGNITIVE.SYS</span>
+              </div>
+              <h3 class="text-slate-900 font-heading font-bold text-2xl mb-4 group-hover:text-neon-purple transition-colors duration-300">Artificial Intelligence & ML</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">Neural networks, deep learning pipelines, computer vision, processing Large Language Models, and real-world generative AI integration.</p>
+            </div>
+            
+            <button class="access-program-btn w-full mt-6 py-3 px-4 rounded-xl text-center text-xs font-bold tracking-widest text-slate-800 bg-slate-100/80 hover:bg-neon-purple hover:text-white border border-slate-200/50 hover:border-transparent transition-all duration-300 shadow-sm flex items-center justify-center space-x-2 group-btn" data-program="ai-ml">
+              <span>Access Program</span>
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="tech-card border border-white/80 rounded-3xl p-8 bg-white/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-neo hover:bg-white flex flex-col justify-between group h-[26rem] shadow-md" data-tilt>
+            <div>
+              <div class="flex items-center justify-between mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-neon-blue/10 flex items-center justify-center border border-neon-blue/20 transition-all duration-500 group-hover:scale-110 shadow-sm">
+                  <!-- Data Science Icon -->
+                  <svg class="w-6 h-6 text-neon-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v5.25c0 .621-.504 1.125-1.125 1.125h-2.25A1.125 1.125 0 013 18.375v-5.25zM9 9.75c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v8.625c0 .621-.504 1.125-1.125 1.125h-2.25A1.125 1.125 0 019 18.375V9.75zM15 5.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v12.75c0 .621-.504 1.125-1.125 1.125h-2.25A1.125 1.125 0 0115 18.375V5.625z"></path></svg>
+                </div>
+                <span class="text-[10px] text-slate-400 font-mono tracking-widest">ANALYTIC.SYS</span>
+              </div>
+              <h3 class="text-slate-900 font-heading font-bold text-2xl mb-4 group-hover:text-neon-blue transition-colors duration-300">Data Science & Analytics</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">Predictive modeling, data visualizations, machine learning algorithms, statistical systems, big data processes with Python & R.</p>
+            </div>
+            
+            <button class="access-program-btn w-full mt-6 py-3 px-4 rounded-xl text-center text-xs font-bold tracking-widest text-slate-800 bg-slate-100/80 hover:bg-neon-blue hover:text-white border border-slate-200/50 hover:border-transparent transition-all duration-300 shadow-sm flex items-center justify-center space-x-2 group-btn" data-program="data-science">
+              <span>Access Program</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="tech-card border border-white/80 rounded-3xl p-8 bg-white/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-neo hover:bg-white flex flex-col justify-between group h-[26rem] shadow-md" data-tilt>
+            <div>
+              <div class="flex items-center justify-between mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-neon-cyan/10 flex items-center justify-center border border-neon-cyan/20 transition-all duration-500 group-hover:scale-110 shadow-sm">
+                  <!-- Cyber Security Icon -->
+                  <svg class="w-6 h-6 text-neon-cyan" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751A11.959 11.959 0 0112 2.714z"></path></svg>
+                </div>
+                <span class="text-[10px] text-slate-400 font-mono tracking-widest">SECURE.SYS</span>
+              </div>
+              <h3 class="text-slate-900 font-heading font-bold text-2xl mb-4 group-hover:text-neon-cyan transition-colors duration-300">Cyber Security & Hacking</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">Ethical hacking, penetration testing, network forensics, secure cryptographic algorithms, and comprehensive enterprise system defense protocols.</p>
+            </div>
+            
+            <button class="access-program-btn w-full mt-6 py-3 px-4 rounded-xl text-center text-xs font-bold tracking-widest text-slate-800 bg-slate-100/80 hover:bg-neon-cyan hover:text-white border border-slate-200/50 hover:border-transparent transition-all duration-300 shadow-sm flex items-center justify-center space-x-2 group-btn" data-program="cyber-security">
+              <span>Access Program</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="tech-card border border-white/80 rounded-3xl p-8 bg-white/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-neo hover:bg-white flex flex-col justify-between group h-[26rem] shadow-md" data-tilt>
+            <div>
+              <div class="flex items-center justify-between mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-neon-blue/10 flex items-center justify-center border border-neon-blue/20 transition-all duration-500 group-hover:scale-110 shadow-sm">
+                  <!-- Cloud Icon -->
+                  <svg class="w-6 h-6 text-neon-blue" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"></path></svg>
+                </div>
+                <span class="text-[10px] text-slate-400 font-mono tracking-widest">CLOUD.SYS</span>
+              </div>
+              <h3 class="text-slate-900 font-heading font-bold text-2xl mb-4 group-hover:text-neon-blue transition-colors duration-300">Cloud Computing</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">AWS, Azure, and Google Cloud infrastructure mapping. Microservices, DevOps pipelines, containerized architectures, and Kubernetes systems.</p>
+            </div>
+            
+            <button class="access-program-btn w-full mt-6 py-3 px-4 rounded-xl text-center text-xs font-bold tracking-widest text-slate-800 bg-slate-100/80 hover:bg-neon-blue hover:text-white border border-slate-200/50 hover:border-transparent transition-all duration-300 shadow-sm flex items-center justify-center space-x-2 group-btn" data-program="cloud-computing">
+              <span>Access Program</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="tech-card border border-white/80 rounded-3xl p-8 bg-white/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-neo hover:bg-white flex flex-col justify-between group h-[26rem] shadow-md" data-tilt>
+            <div>
+              <div class="flex items-center justify-between mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-neon-cyan/10 flex items-center justify-center border border-neon-cyan/20 transition-all duration-500 group-hover:scale-110 shadow-sm">
+                  <!-- VLSI Icon -->
+                  <svg class="w-6 h-6 text-neon-cyan" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"></path></svg>
+                </div>
+                <span class="text-[10px] text-slate-400 font-mono tracking-widest">EMBED.SYS</span>
+              </div>
+              <h3 class="text-slate-900 font-heading font-bold text-2xl mb-4 group-hover:text-neon-cyan transition-colors duration-300">VLSI & Embedded Systems</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">Integrated circuits, hardware description languages (Verilog), firmware integration, custom microcontrollers, IoT mapping, and hardware testing.</p>
+            </div>
+            
+            <button class="access-program-btn w-full mt-6 py-3 px-4 rounded-xl text-center text-xs font-bold tracking-widest text-slate-800 bg-slate-100/80 hover:bg-neon-cyan hover:text-white border border-slate-200/50 hover:border-transparent transition-all duration-300 shadow-sm flex items-center justify-center space-x-2 group-btn" data-program="vlsi">
+              <span>Access Program</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="tech-card border border-white/80 rounded-3xl p-8 bg-white/40 transition-all duration-500 hover:-translate-y-2 hover:shadow-neo hover:bg-white flex flex-col justify-between group h-[26rem] shadow-md" data-tilt>
+            <div>
+              <div class="flex items-center justify-between mb-8">
+                <div class="w-12 h-12 rounded-2xl bg-neon-purple/10 flex items-center justify-center border border-neon-purple/20 transition-all duration-500 group-hover:scale-110 shadow-sm">
+                  <!-- Advanced Tech Icon -->
+                  <svg class="w-6 h-6 text-neon-purple" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499c.172-.11.376-.11.548 0l3.998 2.548c.171.109.277.298.277.502v4.75c0 .204-.106.393-.277.502L12.028 14.35c-.172.11-.376.11-.548 0L7.482 11.8a.59.59 0 01-.277-.502V6.55c0-.204.106-.393.277-.502l3.998-2.549zm0 10.95c.172-.11.376-.11.548 0l3.998 2.549c.171.109.277.298.277.502v4.75c0 .204-.106.393-.277.502l-3.998 2.548c-.172.11-.376.11-.548 0l-3.998-2.548a.59.59 0 01-.277-.502V17.75c0-.204.106-.393.277-.502l3.998-2.549z"></path></svg>
+                </div>
+                <span class="text-[10px] text-slate-400 font-mono tracking-widest">NEXT_GEN.SYS</span>
+              </div>
+              <h3 class="text-slate-900 font-heading font-bold text-2xl mb-4 group-hover:text-neon-purple transition-colors duration-300">Robotics, Web3 & Blockchain</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">Smart contracts, decentralized infrastructure, mechanical automation, robotics control mechanisms, and quantum computing foundational models.</p>
+            </div>
+            
+            <button class="access-program-btn w-full mt-6 py-3 px-4 rounded-xl text-center text-xs font-bold tracking-widest text-slate-800 bg-slate-100/80 hover:bg-neon-purple hover:text-white border border-slate-200/50 hover:border-transparent transition-all duration-300 shadow-sm flex items-center justify-center space-x-2 group-btn" data-program="robotics">
+              <span>Access Program</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Bottom Statement -->
+        <div class="tech-reveal opacity-0 translate-y-12 mt-16 text-center text-xs text-slate-400 font-mono tracking-[0.2em] uppercase">
+          Master future-ready skills with practical learning experiences and industry-focused training.
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 5. WHY RAVAX NOVA SECTION -->
+    <section id="why-ravax" class="relative py-32 overflow-hidden bg-white/40 border-t border-b border-slate-200/40">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <div class="why-reveal opacity-0 translate-y-4 mb-4 flex items-center justify-center space-x-2">
+            <span class="w-6 h-[1.5px] bg-neon-cyan"></span>
+            <span class="text-xs text-neon-cyan font-bold uppercase tracking-[0.25em]">Our DNA & Standards</span>
+            <span class="w-6 h-[1.5px] bg-neon-cyan"></span>
+          </div>
+          <h2 class="why-reveal opacity-0 translate-y-8 font-heading font-bold text-3xl sm:text-5xl text-slate-900 tracking-tight leading-tight">
+            Learning Designed Around <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-cyan">Industry Reality</span>
+          </h2>
+        </div>
+
+        <!-- Animated cards grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Box 1 -->
+          <div class="why-card relative group p-8 rounded-3xl bg-white/50 border border-white/80 overflow-hidden transition-all duration-500 hover:border-slate-300 hover:bg-white shadow-md" data-tilt>
+            <div class="absolute -inset-px bg-gradient-to-tr from-neon-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"></div>
+            <div class="relative z-10">
+              <span class="text-3xl mb-6 block">🧭</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-3">Industry-Oriented Curriculum</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">No static materials. Our syllabus is constantly updated via steering feedback from corporate hiring panels.</p>
+            </div>
+          </div>
+          
+          <!-- Box 2 -->
+          <div class="why-card relative group p-8 rounded-3xl bg-white/50 border border-white/80 overflow-hidden transition-all duration-500 hover:border-slate-300 hover:bg-white shadow-md" data-tilt>
+            <div class="absolute -inset-px bg-gradient-to-tr from-neon-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"></div>
+            <div class="relative z-10">
+              <span class="text-3xl mb-6 block">⚡</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-3">Practical Learning</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">We focus on labs, simulations, live client files, and coding structures. Real mastery happens at the console, not on slides.</p>
+            </div>
+          </div>
+          
+          <!-- Box 3 -->
+          <div class="why-card relative group p-8 rounded-3xl bg-white/50 border border-white/80 overflow-hidden transition-all duration-500 hover:border-slate-300 hover:bg-white shadow-md" data-tilt>
+            <div class="absolute -inset-px bg-gradient-to-tr from-neon-purple/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"></div>
+            <div class="relative z-10">
+              <span class="text-3xl mb-6 block">🎓</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-3">Expert Mentorship</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">Learn from verified active experts, certified trainers, and leading technology consultants guiding you week by week.</p>
+            </div>
+          </div>
+          
+          <!-- Box 4 -->
+          <div class="why-card relative group p-8 rounded-3xl bg-white/50 border border-white/80 overflow-hidden transition-all duration-500 hover:border-slate-300 hover:bg-white shadow-md" data-tilt>
+            <div class="absolute -inset-px bg-gradient-to-tr from-neon-purple/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"></div>
+            <div class="relative z-10">
+              <span class="text-3xl mb-6 block">🚀</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-3">Career-Focused Training</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">Soft skills coaching, interview preparation modules, credential assistance, and persistent resume fine-tuning.</p>
+            </div>
+          </div>
+          
+          <!-- Box 5 -->
+          <div class="why-card relative group p-8 rounded-3xl bg-white/50 border border-white/80 overflow-hidden transition-all duration-500 hover:border-slate-300 hover:bg-white shadow-md" data-tilt>
+            <div class="absolute -inset-px bg-gradient-to-tr from-neon-blue/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"></div>
+            <div class="relative z-10">
+              <span class="text-3xl mb-6 block">🕰️</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-3">Flexible Learning</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">Hybrid training experiences tailored to support working professionals, full-time students, and fresh graduates alike.</p>
+            </div>
+          </div>
+          
+          <!-- Box 6 -->
+          <div class="why-card relative group p-8 rounded-3xl bg-white/50 border border-white/80 overflow-hidden transition-all duration-500 hover:border-slate-300 hover:bg-white shadow-md" data-tilt>
+            <div class="absolute -inset-px bg-gradient-to-tr from-neon-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl pointer-events-none"></div>
+            <div class="relative z-10">
+              <span class="text-3xl mb-6 block">🪐</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-3">Emerging Tech Ecosystem</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed">Get embedded in our growing community of developers, innovators, coders, and healthcare experts shaping industry futures.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 6. STUDENT JOURNEY SECTION -->
+    <section id="journey" class="relative py-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-24">
+          <div class="journey-reveal opacity-0 translate-y-4 mb-4 inline-flex items-center space-x-2">
+            <span class="w-2 h-2 rounded-full bg-neon-blue shadow-glow-blue"></span>
+            <span class="text-xs text-neon-blue font-bold uppercase tracking-[0.25em]">Interactive Career Roadmap</span>
+          </div>
+          <h2 class="journey-reveal opacity-0 translate-y-8 font-heading font-bold text-3xl sm:text-5xl text-slate-900 tracking-tight mb-6">
+            A Clear Path Towards Career Growth
+          </h2>
+          <p class="journey-reveal opacity-0 translate-y-8 text-slate-500 font-light text-base leading-relaxed">
+            From your very first initial consultation to landing your target placement, our ecosystem guides you step by step.
+          </p>
+        </div>
+
+        <!-- Timeline Flow Container -->
+        <div class="relative max-w-4xl mx-auto py-10 px-4">
+          <!-- Connecting Glowing Line (CSS Gradient & JS Dynamic Height) -->
+          <div id="timeline-rail" class="absolute top-0 bottom-0 left-6 sm:left-1/2 -translate-x-[1px] w-[2px] bg-slate-200 rounded-full pointer-events-none">
+            <div id="timeline-progress" class="w-full h-0 bg-gradient-to-b from-neon-blue via-neon-cyan to-neon-purple rounded-full shadow-glow-blue"></div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="timeline-step relative grid grid-cols-1 sm:grid-cols-2 gap-8 mb-24 last:mb-0 group">
+            <div class="absolute left-6 sm:left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
+              <div class="w-10 h-10 rounded-full bg-white border-2 border-slate-200 group-hover:border-neon-blue transition-colors duration-500 flex items-center justify-center font-mono text-xs font-bold text-slate-400 group-hover:text-neon-blue shadow-sm">01</div>
+            </div>
+            <div class="pl-14 sm:pl-0 sm:pr-12 sm:text-right flex flex-col sm:items-end justify-center">
+              <span class="text-[10px] text-neon-blue font-mono uppercase tracking-widest mb-1 block">Phase 01</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-2">Learn</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed max-w-sm">Acquire foundation theories and direct methodologies under the guidance of our hand-picked certified mentors.</p>
+            </div>
+            <div class="hidden sm:block"></div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="timeline-step relative grid grid-cols-1 sm:grid-cols-2 gap-8 mb-24 last:mb-0 group">
+            <div class="absolute left-6 sm:left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
+              <div class="w-10 h-10 rounded-full bg-white border-2 border-slate-200 group-hover:border-neon-cyan transition-colors duration-500 flex items-center justify-center font-mono text-xs font-bold text-slate-400 group-hover:text-neon-cyan shadow-sm">02</div>
+            </div>
+            <div class="hidden sm:block"></div>
+            <div class="pl-14 sm:pl-12 flex flex-col justify-center">
+              <span class="text-[10px] text-neon-cyan font-mono uppercase tracking-widest mb-1 block">Phase 02</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-2">Practice</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed max-w-sm">Interact with practical systems, simulated software, live telemetry databases, and direct labs to construct execution muscle.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="timeline-step relative grid grid-cols-1 sm:grid-cols-2 gap-8 mb-24 last:mb-0 group">
+            <div class="absolute left-6 sm:left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
+              <div class="w-10 h-10 rounded-full bg-white border-2 border-slate-200 group-hover:border-neon-purple transition-colors duration-500 flex items-center justify-center font-mono text-xs font-bold text-slate-400 group-hover:text-neon-purple shadow-sm">03</div>
+            </div>
+            <div class="pl-14 sm:pl-0 sm:pr-12 sm:text-right flex flex-col sm:items-end justify-center">
+              <span class="text-[10px] text-neon-purple font-mono uppercase tracking-widest mb-1 block">Phase 03</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-2">Build</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed max-w-sm">Develop custom deployment frameworks, coding pipelines, and case studies to demonstrate capabilities directly.</p>
+            </div>
+            <div class="hidden sm:block"></div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="timeline-step relative grid grid-cols-1 sm:grid-cols-2 gap-8 mb-24 last:mb-0 group">
+            <div class="absolute left-6 sm:left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
+              <div class="w-10 h-10 rounded-full bg-white border-2 border-slate-200 group-hover:border-neon-blue transition-colors duration-500 flex items-center justify-center font-mono text-xs font-bold text-slate-400 group-hover:text-neon-blue shadow-sm">04</div>
+            </div>
+            <div class="hidden sm:block"></div>
+            <div class="pl-14 sm:pl-12 flex flex-col justify-center">
+              <span class="text-[10px] text-neon-blue font-mono uppercase tracking-widest mb-1 block">Phase 04</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-2">Certify</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed max-w-sm">Earn globally recognized industry credentials (like AAPC CPC®, AWS Practitioner, or professional tech seals) with ease.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="timeline-step relative grid grid-cols-1 sm:grid-cols-2 gap-8 mb-24 last:mb-0 group">
+            <div class="absolute left-6 sm:left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
+              <div class="w-10 h-10 rounded-full bg-white border-2 border-slate-200 group-hover:border-neon-cyan transition-colors duration-500 flex items-center justify-center font-mono text-xs font-bold text-slate-400 group-hover:text-neon-cyan shadow-sm">05</div>
+            </div>
+            <div class="pl-14 sm:pl-0 sm:pr-12 sm:text-right flex flex-col sm:items-end justify-center">
+              <span class="text-[10px] text-neon-cyan font-mono uppercase tracking-widest mb-1 block">Phase 05</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-2">Prepare</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed max-w-sm">Undergo simulated interviews, resume tailoring, and communication coaching to face corporate panels with complete poise.</p>
+            </div>
+            <div class="hidden sm:block"></div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="timeline-step relative grid grid-cols-1 sm:grid-cols-2 gap-8 last:mb-0 group">
+            <div class="absolute left-6 sm:left-1/2 -translate-x-1/2 flex items-center justify-center z-10">
+              <div class="w-10 h-10 rounded-full bg-white border-2 border-slate-200 group-hover:border-neon-purple transition-colors duration-500 flex items-center justify-center font-mono text-xs font-bold text-slate-400 group-hover:text-neon-purple shadow-sm">06</div>
+            </div>
+            <div class="hidden sm:block"></div>
+            <div class="pl-14 sm:pl-12 flex flex-col justify-center">
+              <span class="text-[10px] text-neon-purple font-mono uppercase tracking-widest mb-1 block">Phase 06</span>
+              <h3 class="text-slate-900 font-heading font-bold text-xl mb-2">Get Placed</h3>
+              <p class="text-slate-500 text-sm font-light leading-relaxed max-w-sm">Tap directly into our hiring ecosystem partners and corporate gateways to land your target job placement.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 7. MINIMAL TECH STATEMENT SECTION -->
+    <section class="relative py-48 overflow-hidden bg-white/10 flex items-center justify-center border-t border-slate-200/40">
+      <!-- Background floating gradient sphere -->
+      <div class="absolute w-[800px] h-[300px] rounded-full bg-gradient-to-r from-neon-blue/10 via-neon-cyan/5 to-neon-purple/10 blur-[120px] pointer-events-none"></div>
+      
+      <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+        <div class="statement-reveal opacity-0 scale-95 flex flex-col items-center">
+          <span class="text-xs text-slate-400 font-mono tracking-[0.3em] uppercase mb-8">RAVAX NOVA ECOSYSTEM</span>
+          <h2 class="font-heading font-semibold text-3xl sm:text-5xl md:text-7xl text-slate-900 tracking-tight leading-[1.2] max-w-5xl">
+            "Not just courses. <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-neon-cyan to-neon-purple">
+              An ecosystem focused on skills, technology, innovation, and employability."
+            </span>
+          </h2>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 8. PLACEMENT SECTION -->
+    <section id="placements" class="relative py-32 overflow-hidden bg-white/40 border-t border-b border-slate-200/40">
+      <!-- Grid patterns or lines -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        
+        <!-- Header -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-24">
+          <div class="lg:col-span-7">
+            <div class="place-reveal opacity-0 -translate-x-4 mb-4 flex items-center space-x-2">
+              <span class="w-8 h-[1px] bg-neon-cyan"></span>
+              <span class="text-xs text-neon-cyan font-bold uppercase tracking-[0.2em]">Our Placements Core</span>
+            </div>
+            <h2 class="place-reveal opacity-0 translate-y-8 font-heading font-bold text-3xl sm:text-5xl text-slate-900 tracking-tight leading-[1.1]">
+              Preparing Learners For <br>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-neon-blue">Real Opportunities</span>
+            </h2>
+          </div>
+          <div class="lg:col-span-5">
+            <p class="place-reveal opacity-0 translate-y-8 text-slate-500 font-light text-base sm:text-lg leading-relaxed">
+              Our focus extends far beyond typical training routines. We support learners by strengthening deep practical comprehension, building real interview resilience, and preparing long-term capabilities.
+            </p>
+          </div>
+        </div>
+
+        <!-- Numbers / Metric Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Counter 1 -->
+          <div class="stat-card border border-white/80 rounded-3xl p-8 bg-white/40 flex flex-col justify-between items-start group hover:border-slate-300 hover:bg-white transition-all duration-300 shadow-md">
+            <div>
+              <span class="text-[10px] text-slate-400 font-mono tracking-wider mb-8 block uppercase">PLACEMENT RATIO</span>
+              <div class="flex items-baseline space-x-1 mb-2">
+                <span class="counter-num text-slate-900 font-heading font-extrabold text-5xl sm:text-6xl tracking-tight" data-target="98">0</span>
+                <span class="text-neon-cyan font-heading font-bold text-3xl">%</span>
+              </div>
+            </div>
+            <p class="text-slate-500 text-xs font-light leading-relaxed mt-4">Verified placement success rate for learners completing programs.</p>
+          </div>
+          
+          <!-- Counter 2 -->
+          <div class="stat-card border border-white/80 rounded-3xl p-8 bg-white/40 flex flex-col justify-between items-start group hover:border-slate-300 hover:bg-white transition-all duration-300 shadow-md">
+            <div>
+              <span class="text-[10px] text-slate-400 font-mono tracking-wider mb-8 block uppercase">HIRING NETWORKS</span>
+              <div class="flex items-baseline space-x-1 mb-2">
+                <span class="counter-num text-slate-900 font-heading font-extrabold text-5xl sm:text-6xl tracking-tight" data-target="150">0</span>
+                <span class="text-neon-blue font-heading font-bold text-3xl">+</span>
+              </div>
+            </div>
+            <p class="text-slate-500 text-xs font-light leading-relaxed mt-4">Global hiring partners, software houses, and healthcare networks.</p>
+          </div>
+          
+          <!-- Counter 3 -->
+          <div class="stat-card border border-white/80 rounded-3xl p-8 bg-white/40 flex flex-col justify-between items-start group hover:border-slate-300 hover:bg-white transition-all duration-300 shadow-md">
+            <div>
+              <span class="text-[10px] text-slate-400 font-mono tracking-wider mb-8 block uppercase">MAXIMUM PACKAGE</span>
+              <div class="flex items-baseline space-x-1 mb-2">
+                <span class="counter-num text-slate-900 font-heading font-extrabold text-5xl sm:text-6xl tracking-tight" data-target="32">0</span>
+                <span class="text-neon-purple font-heading font-bold text-3xl">LPA</span>
+              </div>
+            </div>
+            <p class="text-slate-500 text-xs font-light leading-relaxed mt-4">Peak compensation package secured by our top specialized graduates.</p>
+          </div>
+          
+          <!-- Counter 4 -->
+          <div class="stat-card border border-white/80 rounded-3xl p-8 bg-white/40 flex flex-col justify-between items-start group hover:border-slate-300 hover:bg-white transition-all duration-300 shadow-md">
+            <div>
+              <span class="text-[10px] text-slate-400 font-mono tracking-wider mb-8 block uppercase">AVERAGE COMP</span>
+              <div class="flex items-baseline space-x-1 mb-2">
+                <span class="counter-num text-slate-900 font-heading font-extrabold text-5xl sm:text-6xl tracking-tight" data-target="6">0</span>
+                <span class="text-slate-400 font-heading font-bold text-3xl">.2LPA</span>
+              </div>
+            </div>
+            <p class="text-slate-500 text-xs font-light leading-relaxed mt-4">Strong average beginning salary package achieved across courses.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 9. FINAL CTA SECTION (Inquiry & Contact Included) -->
+    <section id="contact" class="relative py-32 overflow-hidden">
+      <!-- Glow Gradients -->
+      <div class="absolute top-[10%] left-[50%] -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-cyan-200/20 blur-[150px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          
+          <!-- CTA Banner Text -->
+          <div class="lg:col-span-6 flex flex-col">
+            <h2 class="cta-reveal opacity-0 translate-y-8 font-heading font-bold text-4xl sm:text-6xl text-slate-900 tracking-tight leading-[1.05] mb-6">
+              Start Building <br>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-neon-cyan to-neon-purple">
+                Your Future Today
+              </span>
+            </h2>
+            <p class="cta-reveal opacity-0 translate-y-8 text-slate-500 font-light text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+              Connect with our technology & career consultants. Whether you want to transition into healthcare coding or master deep artificial engineering paths, we have the ecosystem ready.
+            </p>
+            
+            <div class="cta-reveal opacity-0 translate-y-8 flex flex-wrap gap-6 text-xs font-mono text-slate-400">
+              <div class="flex items-center space-x-2">
+                <span class="text-neon-cyan font-bold">✓</span>
+                <span>Hybrid Classrooms</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span class="text-neon-purple font-bold">✓</span>
+                <span>Placement Ecosystem</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span class="text-neon-blue font-bold">✓</span>
+                <span>Certified Mentors</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Glassmorphic Form Card -->
+          <div class="lg:col-span-6 cta-reveal opacity-0 translate-y-12">
+            <div class="relative rounded-3xl bg-white/60 p-[1px] border border-white shadow-neo">
+              
+              <form class="relative bg-white/40 backdrop-blur-xl rounded-[23px] p-8 sm:p-10 space-y-6">
+                <h3 class="text-slate-900 font-heading font-bold text-xl sm:text-2xl border-b border-slate-200/60 pb-4">Schedule Your Consultation</h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="flex flex-col space-y-2">
+                    <label class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Full Name</label>
+                    <input type="text" placeholder="John Doe" required class="w-full bg-white/60 border border-slate-200 focus:border-neon-blue focus:outline-none transition-all duration-300 text-sm rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 shadow-sm">
+                  </div>
+                  <div class="flex flex-col space-y-2">
+                    <label class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Email Address</label>
+                    <input type="email" placeholder="john@example.com" required class="w-full bg-white/60 border border-slate-200 focus:border-neon-blue focus:outline-none transition-all duration-300 text-sm rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 shadow-sm">
+                  </div>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="flex flex-col space-y-2">
+                    <label class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Phone Number</label>
+                    <input type="tel" placeholder="+91 XXXXX XXXXX" required class="w-full bg-white/60 border border-slate-200 focus:border-neon-blue focus:outline-none transition-all duration-300 text-sm rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 shadow-sm">
+                  </div>
+                  <div class="flex flex-col space-y-2">
+                    <label class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Target Domain</label>
+                    <select class="w-full bg-white/60 border border-slate-200 focus:border-neon-blue focus:outline-none transition-all duration-300 text-sm rounded-xl px-4 py-3 text-slate-500 focus:text-slate-900 shadow-sm">
+                      <option value="medical-coding">Medical Coding & Billing</option>
+                      <option value="artificial-intelligence">AI & Machine Learning</option>
+                      <option value="cyber-security">Cyber Security & Hacking</option>
+                      <option value="cloud-computing">Cloud & Deep Tech</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="flex flex-col space-y-2">
+                  <label class="text-[10px] text-slate-400 font-mono uppercase tracking-wider">Brief Message (Optional)</label>
+                  <textarea rows="3" placeholder="Tell us about your background..." class="w-full bg-white/60 border border-slate-200 focus:border-neon-blue focus:outline-none transition-all duration-300 text-sm rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 shadow-sm resize-none"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full relative group px-6 py-4 rounded-xl font-heading text-xs font-bold uppercase tracking-widest text-white bg-gradient-to-r from-neon-blue to-neon-purple shadow-md transition-transform duration-300 hover:scale-[1.02] flex items-center justify-center space-x-2">
+                  <span>Send Consultation Request</span>
+                  <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- 10. FOOTER -->
+  <footer class="relative bg-white/80 border-t border-slate-200/50 overflow-hidden z-20">
+    <div class="max-w-7xl mx-auto px-6 py-20 relative z-10">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 items-start mb-16">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-5 flex flex-col space-y-6">
+          <a href="#" class="flex items-center space-x-3">
+            <div class="relative w-8 h-8 flex items-center justify-center rounded-lg bg-gradient-to-tr from-neon-purple via-neon-cyan to-neon-blue p-[1px] shadow-sm">
+              <div class="w-full h-full bg-white rounded-[7px] flex items-center justify-center">
+                <span class="text-slate-800 font-bold font-heading text-sm">R</span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-slate-800 font-bold font-heading text-xs uppercase tracking-widest leading-none">Ravax Nova</span>
+              <span class="text-[8px] text-slate-400 tracking-wider font-semibold">TECHNOLOGIES PRIVATE LIMITED</span>
+            </div>
+          </a>
+          <p class="text-slate-400 text-xs font-light leading-relaxed max-w-sm">
+            Future-focused education ecosystem designed to prepare learners, students, and active specialists for the technology and healthcare domains shaping tomorrow.
+          </p>
+          <div class="flex space-x-4">
+            <!-- Social SVG Links -->
+            <a href="#" class="w-8 h-8 rounded-lg bg-white border border-slate-200/60 hover:border-neon-blue/40 hover:bg-neon-blue/5 flex items-center justify-center text-slate-400 hover:text-neon-blue transition-all duration-300 shadow-sm">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-lg bg-white border border-slate-200/60 hover:border-neon-cyan/40 hover:bg-neon-cyan/5 flex items-center justify-center text-slate-400 hover:text-neon-cyan transition-all duration-300 shadow-sm">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Column 1 -->
+        <div class="lg:col-span-2 flex flex-col space-y-4">
+          <span class="text-[10px] text-slate-800 font-mono uppercase tracking-widest font-bold">Ecosystem</span>
+          <nav class="flex flex-col space-y-2 text-xs text-slate-400 font-light">
+            <a href="#about" class="hover:text-neon-blue transition-colors duration-300">About Our Core</a>
+            <a href="#medical-coding" class="hover:text-neon-cyan transition-colors duration-300">Medical Coding Hub</a>
+            <a href="#technologies" class="hover:text-neon-purple transition-colors duration-300">Emerging Tech</a>
+            <a href="#journey" class="hover:text-neon-blue transition-colors duration-300">Career Roadmap</a>
+          </nav>
+        </div>
+
+        <!-- Links Column 2 -->
+        <div class="lg:col-span-2 flex flex-col space-y-4">
+          <span class="text-[10px] text-slate-800 font-mono uppercase tracking-widest font-bold">Resources</span>
+          <nav class="flex flex-col space-y-2 text-xs text-slate-400 font-light">
+            <a href="#placements" class="hover:text-neon-cyan transition-colors duration-300">Hiring Partners</a>
+            <a href="#contact" class="hover:text-neon-blue transition-colors duration-300">Admissions Gateway</a>
+            <a href="#" class="hover:text-neon-purple transition-colors duration-300">Privacy & Terms</a>
+            <a href="#" class="hover:text-neon-blue transition-colors duration-300">Support Desk</a>
+          </nav>
+        </div>
+
+        <!-- Links Column 3 -->
+        <div class="lg:col-span-3 flex flex-col space-y-4">
+          <span class="text-[10px] text-slate-800 font-mono uppercase tracking-widest font-bold">Contact Gateway</span>
+          <div class="flex flex-col space-y-2 text-xs text-slate-400 font-light leading-relaxed">
+            <p>RAVAX NOVA TECHNOLOGIES PVT LTD<br>Corporate Hub & Learning Lab</p>
+            <p>Gateway Email: <a href="mailto:info@ravaxnova.com" class="text-slate-800 font-normal hover:text-neon-blue transition-colors">info@ravaxnova.com</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-200/50 pt-8 flex flex-col sm:flex-row justify-between items-center text-[10px] text-slate-400 font-mono gap-4">
+        <span>© 2026 RAVAX NOVA TECHNOLOGIES PRIVATE LIMITED. ALL RIGHTS RESERVED.</span>
+        <span>DESIGNED BEYOND CLASSROOMS.</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Slide-over Program Detail Modal -->
+  <div id="program-modal" class="fixed inset-0 z-50 pointer-events-none opacity-0 invisible transition-all duration-500">
+    <!-- Backdrop overlay -->
+    <div id="modal-backdrop" class="absolute inset-0 bg-slate-900/10 backdrop-blur-sm transition-opacity duration-500"></div>
+    
+    <!-- Drawer Content -->
+    <div id="modal-drawer" class="absolute top-0 right-0 bottom-0 w-full max-w-2xl bg-white/90 backdrop-blur-2xl border-l border-white shadow-2xl p-8 sm:p-12 overflow-y-auto transform translate-x-full transition-transform duration-500 flex flex-col justify-between pointer-events-auto">
+      
+      <!-- Close button on top-right -->
+      <div>
+        <div class="flex items-center justify-between border-b border-slate-200/60 pb-6 mb-8">
+          <div class="flex flex-col">
+            <span id="modal-program-code" class="text-[10px] text-cyan-600 font-mono uppercase tracking-widest mb-1">PROGRAM CODE</span>
+            <h3 id="modal-program-title" class="text-slate-900 font-heading font-extrabold text-2xl sm:text-3xl tracking-tight">Program Title</h3>
+          </div>
+          <button id="modal-close-btn" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center text-slate-500 hover:text-slate-900 transition-all duration-300">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+        
+        <!-- Detailed Plan -->
+        <div class="space-y-8">
+          <div>
+            <h4 class="text-slate-800 font-heading font-bold text-sm uppercase tracking-wider mb-4 flex items-center">
+              <span class="w-1.5 h-4 bg-cyan-500 rounded-full mr-2.5"></span>
+              Detailed Syllabus Plan
+            </h4>
+            <div id="modal-program-syllabus" class="grid grid-cols-1 gap-4 font-light text-slate-600 text-sm">
+              <!-- Syllabus phases dynamic injection -->
+            </div>
+          </div>
+          
+          <!-- Benefits -->
+          <div>
+            <h4 class="text-slate-800 font-heading font-bold text-sm uppercase tracking-wider mb-4 flex items-center">
+              <span class="w-1.5 h-4 bg-violet-500 rounded-full mr-2.5"></span>
+              Key Benefits & Outcomes
+            </h4>
+            <ul id="modal-program-benefits" class="space-y-3 font-light text-slate-600 text-sm">
+              <!-- Benefits dynamic injection -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer Meta details -->
+      <div class="border-t border-slate-200/60 pt-8 mt-12 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+        <div class="flex flex-col">
+          <span class="text-[9px] text-slate-400 font-mono uppercase tracking-wider">Target Salary Package</span>
+          <span id="modal-program-package" class="text-slate-900 font-heading font-extrabold text-2xl">Up to 32 LPA</span>
+        </div>
+        <a href="#contact" id="modal-enroll-btn" class="px-8 py-4 rounded-xl font-heading text-xs font-bold uppercase tracking-widest text-white bg-gradient-to-r from-neon-blue to-neon-purple shadow-md hover:shadow-lg transition-all duration-300">
+          Enquire Now
+        </a>
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- App Script Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
