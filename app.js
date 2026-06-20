@@ -585,4 +585,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /* ====================================================
+     11. FORM SUBMISSION TO GOOGLE SHEETS
+     ==================================================== */
+  const form = document.getElementById('consultation-form');
+  const submitText = document.getElementById('submit-text');
+
+  // Replace this placeholder with your deployed Google Apps Script Web App URL
+  const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+
+  if (form && submitText) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const data = {
+        timestamp: new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' }),
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        domain: formData.get('domain'),
+        message: formData.get('message') || ''
+      };
+
+      const originalText = submitText.textContent;
+      submitText.textContent = 'Sending...';
+
+      if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
+        // Fallback simulation when the Web App URL is not set yet
+        setTimeout(() => {
+          alert('Consultation Request Submitted successfully! \n\n(Important: To link this to your Google Sheet, please set up the Google Apps Script Web App URL in app.js as described in the walkthrough instructions.)');
+          form.reset();
+          submitText.textContent = originalText;
+        }, 1000);
+        return;
+      }
+
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+      .then(() => {
+        alert('Thank you! Your request has been successfully recorded in the Google Sheet.');
+        form.reset();
+      })
+      .catch((error) => {
+        console.error('Error submitting form:', error);
+        alert('There was an issue submitting your request. Please try again.');
+      })
+      .finally(() => {
+        submitText.textContent = originalText;
+      });
+    });
+  }
+
 });
